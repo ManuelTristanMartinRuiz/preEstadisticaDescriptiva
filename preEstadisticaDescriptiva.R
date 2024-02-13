@@ -41,4 +41,40 @@ print(maximo_y)
 minimo_y <-min(y)
 print(minimo_y)
 
-#Ej.8 
+#Ej.8
+absoluto_y <- abs(y[[1]])
+print(absoluto_y)
+
+#Ej.9
+raiz_y <-sqrt(y)
+print(raiz_y)
+
+#Ej.10
+suma_y <- sum(y)
+print(suma_y)
+
+#Ej.11
+list <- c(x,y)
+print(list)
+length(list)
+# la longitud de este objeto "list" es 10
+class(list)
+# Porque la lista es un objeto en total, y como los números del vector "y" tienen decimales, y ahora tenemos una única lista, donde se adapta para poder leer todos los datos. Es lo que denominamos coerción, la prioridad para trasnformar un tipo de dato a otro.
+
+#Ej.12
+is.na(list)
+#No existen valores "NA" en el objeto "list"
+
+#Ej.13
+z <- c(29,NA,12,46,73)
+
+#Ej.14
+media_z <- mean(z)
+print(media_z)
+#Da como resultado NA, porque hay un valor no asignado
+is.na(media_z)
+z_sol <-c(29,0,12,46,73)
+media_z_sol <- mean(z_sol)
+print(media_z_sol)
+
+#Ej.15
