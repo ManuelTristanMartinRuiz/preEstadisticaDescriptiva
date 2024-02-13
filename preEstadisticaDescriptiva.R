@@ -1,3 +1,5 @@
+#Manuel Tristán Martín Ruiz
+#Practica 1 
 # Ej.1
 x <- c(1,2,3,4,5)
 y <- c(9.1,2.4,7.5,1.3,3.4)
@@ -105,10 +107,8 @@ print(restar_matriz)
 #Resta los valores dentro de la matriz posición por posición, eso es lo que provoca el resultado. 
 
 #Ej.19
-matriz_1 <- matrix(c(24,69,3,90,23,56,1,63,87,21,77,19),
-                   nrow = 3, ncol = 4,
-                   byrow = T)
-print(matriz_1)
+matriz_t <- t(matriz)
+print(matriz_t)
 
 #Ej.20
 matriz_mult_constante <- 3*matriz
@@ -122,3 +122,10 @@ print(matriz_mult)
 print(matriz_mult[[2,3]])
 print(matriz_mult[2,])
 print(matriz_mult[,2])
+
+#Practica 2
+
+#Ej.1
+set.seed(123)
+n_registros <- 100
+
