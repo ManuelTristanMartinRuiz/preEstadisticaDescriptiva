@@ -160,4 +160,6 @@ desviación_estandar <- sd(num_cuentas)
 print(desviación_estandar)
 
 #Ej.10
+library(ggplot2)
 
+hist(num_cuentas)
