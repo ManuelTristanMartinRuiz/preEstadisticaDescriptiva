@@ -127,7 +127,7 @@ print(matriz_mult[,2])
 
 #Ej.1
 set.seed(123)
-num_cuentas <- round(rnorm(100, mean = 50, sd = 19))
+num_cuentas <- round(rnorm(100, mean = 50, sd = 10))
 print(num_cuentas)
 
 #Ej.2
@@ -141,15 +141,16 @@ moda <- as.numeric(names(sort(table(num_cuentas), decreasing = TRUE)[1]))
 print(paste("la moda de las cuentas en el yacimiento es:", moda))
 
 #Ej.5
-range(num_cuentas)
+rango <- max(num_cuentas)-min(num_cuentas)
+print(rango)
 
 #Ej.6
-Q1 <- quantile(num_cuentas, 0.25)
-print(Q1)
+primer_cuartil <- quantile(num_cuentas, probs = 0.25)
+print(primer_cuartil)
 
 #Ej.7
-Q3 <- quantile(num_cuentas, 0.75)
-print(Q3)
+percentil_75 <- quantile(num_cuentas, probs = 0.75)
+print(percentil_75)
 
 #Ej.8
 varianza <- var(num_cuentas)
@@ -163,18 +164,61 @@ print(desviación_estandar)
 library(ggplot2)
 
 hist(num_cuentas,
-     main = "Frecuencia de cuentas por yacimiento",
-     xlab = "Cuentas",
-     ylab = "yacimientos",
+     main = "Histograma de frecuencia",
+     xlab = "Número de cuentas",
+     ylab = "Frecuencia",
      col = "blue",
      border = "black",
      breaks = 10)
 
 #Ej.11
 boxplot(num_cuentas,
-        main = "Densidad de cuentas por yacimiento",
+        main = "Diagrama de caja",
+        ylab = "Número de cuentas",
         col = "lightblue",
         border = "black")
 #Ej.12
 densidad <- density(num_cuentas)
-plot(densidad, main = "Gráfico de Densidad", xlab = "Yacimientos", ylab = "Densidad de Cuentas")
+plot(densidad, 
+     main = "Gráfico de densidad de cuentas", 
+     xlab = "Número de cuentas", 
+     ylab = "Densidad")
+
+#Ej.13
+barplot(num_cuentas, 
+        main = "Gráfico de Barras", 
+        xlab = "Intervalos", 
+        ylab = "Frecuencia",
+        col = "lightblue",
+        border = "black")
+#Ej.14
+tipo_artefacto <- sample(c("Vajilla", "Fibula", "Cuentas", "Monedas", "Tinajas"), 10, replace = TRUE)
+material <- sample(c("Cerámica", "Metal", "Vidrio", "Piedra"), 10, replace = TRUE)
+periodo_cultural <- sample(c("Romano Republicano", "Romano Imperial", "Tardoantigüo","Emiral","Califal"), 10, replace = TRUE)
+estado_conservacion <- sample(c("Muy Bueno","Bueno", "Regular", "Malo"), 10, replace = TRUE)
+ubicacion <- sample(c("Granada", "Mertola", "Córdoba","Málaga"), 10, replace = TRUE)
+
+Datos_ej_14 <- data.frame(
+  tipo_artefacto = tipo_artefacto,
+  material = material,
+  periodo_cultural = periodo_cultural,
+  estado_conservacion = estado_conservacion,
+  ubicacion = ubicacion
+)
+print(Datos_ej_14)
+View(Datos_ej_14)
+
+tabla_tipo_artefacto <- table(tipo_artefacto)
+View(tabla_tipo_artefacto)
+
+tabla_material <- table(material)
+View(tabla_material)
+
+tabla_periodo_cultural <- table(periodo_cultural)
+View(tabla_periodo_cultural)
+
+tabla_estado_conservacion <- table(estado_conservacion)
+View(tabla_estado_conservacion)
+
+tabla_ubicacion <- table(ubicacion)
+View(tabla_ubicacion)
