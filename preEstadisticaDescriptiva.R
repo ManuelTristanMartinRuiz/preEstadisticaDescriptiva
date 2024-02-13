@@ -127,5 +127,37 @@ print(matriz_mult[,2])
 
 #Ej.1
 set.seed(123)
-n_registros <- 100
+num_cuentas <- round(rnorm(100, mean = 50, sd = 19))
+print(num_cuentas)
+
+#Ej.2
+mean(num_cuentas)
+
+#Ej.3
+median(num_cuentas)
+
+#Ej.4
+moda <- as.numeric(names(sort(table(num_cuentas), decreasing = TRUE)[1]))
+print(paste("la moda de las cuentas en el yacimiento es:", moda))
+
+#Ej.5
+range(num_cuentas)
+
+#Ej.6
+Q1 <- quantile(num_cuentas, 0.25)
+print(Q1)
+
+#Ej.7
+Q3 <- quantile(num_cuentas, 0.75)
+print(Q3)
+
+#Ej.8
+varianza <- var(num_cuentas)
+print(varianza)
+
+#Ej.9
+desviación_estandar <- sd(num_cuentas)
+print(desviación_estandar)
+
+#Ej.10
 
