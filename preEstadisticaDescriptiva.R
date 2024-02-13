@@ -162,4 +162,19 @@ print(desviación_estandar)
 #Ej.10
 library(ggplot2)
 
-hist(num_cuentas)
+hist(num_cuentas,
+     main = "Frecuencia de cuentas por yacimiento",
+     xlab = "Cuentas",
+     ylab = "yacimientos",
+     col = "blue",
+     border = "black",
+     breaks = 10)
+
+#Ej.11
+boxplot(num_cuentas,
+        main = "Densidad de cuentas por yacimiento",
+        col = "lightblue",
+        border = "black")
+#Ej.12
+densidad <- density(num_cuentas)
+plot(densidad, main = "Gráfico de Densidad", xlab = "Yacimientos", ylab = "Densidad de Cuentas")
