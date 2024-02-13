@@ -78,3 +78,47 @@ media_z_sol <- mean(z_sol)
 print(media_z_sol)
 
 #Ej.15
+matriz <- matrix(c(24,69,3,90,23,56,1,63,87,21,77,19),
+                  nrow = 4, ncol = 3)
+print(matriz)
+#Los valores se rellenan según las columnas [1,1], [2,1], [3,1], [4,1] y así con las columnas 2 y 3.
+
+#Ej.16 
+matriz_filas <- matrix(c(24,69,3,90,23,56,1,63,87,21,77,19),
+                       nrow = 4, ncol = 3,
+                       byrow = T)
+print(matriz_filas)
+
+#Ej.17
+a <- matrix(c(1:9),nrow = 3, ncol = 3)
+print(a)
+b <- matrix(c(10:18),nrow = 3, ncol = 3)
+print(b)
+
+#Ej.18
+sumar_matriz <- a+b
+print(sumar_matriz)
+
+restar_matriz <- a-b
+print(restar_matriz)
+
+#Resta los valores dentro de la matriz posición por posición, eso es lo que provoca el resultado. 
+
+#Ej.19
+matriz_1 <- matrix(c(24,69,3,90,23,56,1,63,87,21,77,19),
+                   nrow = 3, ncol = 4,
+                   byrow = T)
+print(matriz_1)
+
+#Ej.20
+matriz_mult_constante <- 3*matriz
+print(matriz_mult_constante)
+
+#Ej.21
+matriz_mult <- a*b
+print(matriz_mult)
+
+#Ej.22
+print(matriz_mult[[2,3]])
+print(matriz_mult[2,])
+print(matriz_mult[,2])
